@@ -15,6 +15,9 @@ public class TempMeActivity extends AppCompatActivity {
     RadioButton toF;
     RadioButton toK;
     RadioButton toR;
+    RadioButton fToc;
+    RadioButton fTok;
+    RadioButton fToR;
     Button convert;
 
     @Override
@@ -26,6 +29,9 @@ public class TempMeActivity extends AppCompatActivity {
         toF = (RadioButton) findViewById(R.id.toFahrenheit);
         toK = (RadioButton) findViewById(R.id.toKelvin);
         toR = (RadioButton) findViewById(R.id.toReaumur);
+        fToc = (RadioButton)  findViewById(R.id.ftoc);
+        fTok = (RadioButton) findViewById(R.id.ftok);
+        fToR = (RadioButton) findViewById(R.id.ftor);
 
         convert = (Button) findViewById(R.id.convert_button);
         convert.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +51,12 @@ public class TempMeActivity extends AppCompatActivity {
         }else if(toK.isChecked()) {
             value = TemperatureConverter.celsiusToKelvin(value);
         }else if(toR.isChecked()) {
+            value = TemperatureConverter.celsiusToReaumur(value);
+        }else if(fToc.isChecked()) {
+            value = TemperatureConverter.fahrenheitToCelsius(value);
+        }else if(fTok.isChecked()) {
+            value = TemperatureConverter.celsiusToKelvin(value);
+        }else if(fToR.isChecked()) {
             value = TemperatureConverter.celsiusToReaumur(value);
         }
     }

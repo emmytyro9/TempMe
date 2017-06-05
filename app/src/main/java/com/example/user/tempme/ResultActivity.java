@@ -20,7 +20,8 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         result = (TextView) findViewById(R.id.result);
-        result.setText(value + "");
+        String txtFormat = String.format("%.1f" , value);
+        result.setText(txtFormat);
 
         button = (Button) findViewById(R.id.suggestion_button);
         button.setOnClickListener(new View.OnClickListener() {
