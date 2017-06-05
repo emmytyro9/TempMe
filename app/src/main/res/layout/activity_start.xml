@@ -4,28 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.tempme.StartActivity">
+    tools:context="com.example.user.tempme.StartActivity"
+    android:background="@drawable/start">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to"
-        android:textSize="40dp"
+        android:textSize="20dp"
         android:id="@+id/textView"
+        android:layout_marginTop="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="66dp" />
+        android:layout_marginStart="12dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TempMe!"
-        android:textSize="70dp"
-        android:layout_marginTop="57dp"
+        android:text="Temp"
+        android:textSize="90dp"
         android:id="@+id/textView2"
-        android:layout_marginEnd="17dp"
+        android:layout_marginTop="49dp"
         android:layout_below="@+id/textView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Me"
+        android:textSize="120dp"
+        android:id="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/start_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Know Your Temperature"
+        android:textSize="20dp"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/start_button"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="15dp" />
 
     <Button
         android:id="@+id/start_button"
